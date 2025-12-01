@@ -14,18 +14,11 @@ import java.time.LocalDateTime;
 public class ActivityService {
 
     private final ActivityRepository activityRepository;
-    private final UserValiationService userValiationService;
 
     public ActivityResponse trackActivity(ActivityRequest request) {
-
-        boolean isValidate= userValiationService.validateUser(request.getUserId());
-        if(!isValidate){
-            throw new IllegalArgumentException("Invalid User ID: " + request.getUserId());
-        }
-
         LocalDateTime now = LocalDateTime.now();
-        Activity activity =Activity.builder().
-                userId(request.getUserId())
+        Activity activity = Activity.builder()
+                .userId(request.getUserId())
                 .type(request.getType())
                 .duration(request.getDuration())
                 .caloriesBurned(request.getCaloriesBurned())
@@ -40,7 +33,7 @@ public class ActivityService {
     }
 
     private ActivityResponse mapToResponse(Activity activity) {
-        ActivityResponse response =new ActivityResponse();
+        ActivityResponse response = new ActivityResponse();
         response.setId(activity.getId());
         response.setUserId(activity.getUserId());
         response.setType(activity.getType());

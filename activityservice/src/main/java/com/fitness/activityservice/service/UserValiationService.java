@@ -5,11 +5,17 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.reactive.function.client.WebClientResponseException;
 
-@Service
+/**
+ * UserValidationService - Currently disabled
+ * This service is not part of the tutorial architecture
+ * User validation should be handled at the API Gateway level in production
+ */
+// @Service - Commented out to disable this service
 @RequiredArgsConstructor
 public class UserValiationService {
-    private final WebClient userServiceWebClient;
+    // private final WebClient userServiceWebClient;
 
+    /*
     public boolean validateUser(String userId) {
         try {
             Boolean result = userServiceWebClient.get()
@@ -23,4 +29,5 @@ public class UserValiationService {
             return false;
         }
     }
+    */
 }

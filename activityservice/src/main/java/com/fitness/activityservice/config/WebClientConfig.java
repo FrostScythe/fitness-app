@@ -5,10 +5,19 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.function.client.WebClient;
 
+/**
+ * WebClient configuration for inter-service communication
+ * Currently disabled as user validation is not part of the tutorial architecture
+ */
 @Configuration
 public class WebClientConfig {
+
+    // Commented out - not needed for tutorial implementation
+    // User validation should be handled differently if needed in production
+
+    /*
     @Bean
-    @LoadBalanced // Enable load balancing for WebClient
+    @LoadBalanced
     public WebClient.Builder webClientBuilder() {
         return WebClient.builder();
     }
@@ -16,7 +25,8 @@ public class WebClientConfig {
     @Bean
     public WebClient userServiceWebClient(WebClient.Builder webClientBuilder) {
         return webClientBuilder
-                .baseUrl("http://USERSERVICE") // Use the service name registered in Eureka
+                .baseUrl("http://USERSERVICE")
                 .build();
     }
+    */
 }

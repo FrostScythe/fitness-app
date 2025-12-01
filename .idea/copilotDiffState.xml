@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/activityservice/src/main/java/com/fitness/activityservice/ActivityserviceApplication.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/activityservice/src/main/java/com/fitness/activityservice/ActivityserviceApplication.java" />
+              <option name="originalContent" value="package com.fitness.activityservice;&#10;&#10;import org.springframework.boot.SpringApplication;&#10;import org.springframework.boot.autoconfigure.SpringBootApplication;&#10;import org.springframework.cloud.client.discovery.EnableDiscoveryClient;&#10;&#10;@SpringBootApplication&#10;@EnableDiscoveryClient&#10;public class ActivityserviceApplication {&#10;&#10;&#9;public static void main(String[] args) {&#10;&#9;&#9;SpringApplication.run(ActivityserviceApplication.class, args);&#10;&#9;}&#10;&#10;}&#10;" />
+              <option name="updatedContent" value="package com.fitness.activityservice;&#10;&#10;import org.springframework.boot.SpringApplication;&#10;import org.springframework.boot.autoconfigure.SpringBootApplication;&#10;import org.springframework.cloud.client.discovery.EnableDiscoveryClient;&#10;&#10;@SpringBootApplication&#10;@EnableDiscoveryClient&#10;public class ActivityserviceApplication {&#10;&#10;&#9;public static void main(String[] args) {&#10;&#9;&#9;SpringApplication.run(ActivityserviceApplication.class, args);&#10;&#9;}&#10;&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/activityservice/src/main/resources/application.yml">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/activityservice/src/main/resources/application.yml" />
+              <option name="originalContent" value="spring:&#10;  application:&#10;    name: activityservice&#10;  data:&#10;    mongodb:&#10;      uri: mongodb://localhost:27017/aiactivityfitness&#10;&#10;eureka:&#10;  client:&#10;    service-url:&#10;      defaultZone: http://localhost:8761/eureka/&#10;    register-with-eureka: true&#10;    fetch-registry: true&#10;  instance:&#10;    prefer-ip-address: true&#10;    hostname: localhost&#10;&#10;server:&#10;  port: 8082" />
+              <option name="updatedContent" value="spring:&#10;  application:&#10;    name: activityservice&#10;  data:&#10;    mongodb:&#10;      uri: mongodb://localhost:27017/aiactivityfitness&#10;&#10;eureka:&#10;  client:&#10;    service-url:&#10;      defaultZone: http://localhost:8761/eureka/&#10;    register-with-eureka: true&#10;    fetch-registry: true&#10;  instance:&#10;    prefer-ip-address: true&#10;    hostname: localhost&#10;&#10;server:&#10;  port: 8082" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/userService/src/main/java/com/fitness/userService/UserServiceApplication.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/userService/src/main/java/com/fitness/userService/UserServiceApplication.java" />
+              <option name="originalContent" value="package com.fitness.userService;&#10;&#10;import org.springframework.boot.SpringApplication;&#10;import org.springframework.boot.autoconfigure.SpringBootApplication;&#10;import org.springframework.cloud.client.discovery.EnableDiscoveryClient;&#10;&#10;@SpringBootApplication&#10;@EnableDiscoveryClient&#10;public class UserServiceApplication {&#10;&#10;&#9;public static void main(String[] args) {&#10;&#9;&#9;SpringApplication.run(UserServiceApplication.class, args);&#10;&#9;}&#10;&#10;}&#10;" />
+              <option name="updatedContent" value="package com.fitness.userService;&#10;&#10;import org.springframework.boot.SpringApplication;&#10;import org.springframework.boot.autoconfigure.SpringBootApplication;&#10;import org.springframework.cloud.client.discovery.EnableDiscoveryClient;&#10;&#10;@SpringBootApplication&#10;@EnableDiscoveryClient&#10;public class UserServiceApplication {&#10;&#10;&#9;public static void main(String[] args) {&#10;&#9;&#9;SpringApplication.run(UserServiceApplication.class, args);&#10;&#9;}&#10;&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/userService/src/main/resources/application.yml">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/userService/src/main/resources/application.yml" />
+              <option name="originalContent" value="spring:&#10;  application:&#10;    name: USERSERVICE&#10;&#10;  datasource:&#10;    url: jdbc:postgresql://localhost:5432/fitness-user&#10;    username: postgres&#10;    password: root&#10;&#10;  jpa:&#10;    hibernate:&#10;      ddl-auto: update&#10;    database-platform: org.hibernate.dialect.PostgreSQLDialect&#10;&#10;eureka:&#10;  client:&#10;    service-url:&#10;      defaultZone: http://localhost:8761/eureka/&#10;&#10;server:&#10;  port: 8081" />
+              <option name="updatedContent" value="spring:&#10;  application:&#10;    name: USERSERVICE&#10;&#10;  datasource:&#10;    url: jdbc:postgresql://localhost:5432/fitness-user&#10;    username: postgres&#10;    password: root&#10;&#10;  jpa:&#10;    hibernate:&#10;      ddl-auto: update&#10;    database-platform: org.hibernate.dialect.PostgreSQLDialect&#10;&#10;eureka:&#10;  client:&#10;    service-url:&#10;      defaultZone: http://localhost:8761/eureka/&#10;&#10;server:&#10;  port: 8081" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
