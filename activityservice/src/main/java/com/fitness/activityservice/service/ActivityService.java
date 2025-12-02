@@ -9,8 +9,8 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 
-@Service
-@RequiredArgsConstructor
+@Service //Marks class as a Spring-managed service bean
+@RequiredArgsConstructor //Lombok generates constructor for final fields (used for DI)
 public class ActivityService {
 
     private final ActivityRepository activityRepository;
