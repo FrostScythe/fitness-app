@@ -14,8 +14,16 @@ import java.time.LocalDateTime;
 public class ActivityService {
 
     private final ActivityRepository activityRepository;
+    private final UserValidationService userValidationService;
 
     public ActivityResponse trackActivity(ActivityRequest request) {
+
+       boolean isValidUser=  userValidationService.validateUser(request.getUserId());
+
+       if(!isValidUser){
+           throw new IllegalArgumentException("Invalid user ID: " + request.getUserId());
+       }
+
         LocalDateTime now = LocalDateTime.now();
         Activity activity = Activity.builder()
                 .userId(request.getUserId())
