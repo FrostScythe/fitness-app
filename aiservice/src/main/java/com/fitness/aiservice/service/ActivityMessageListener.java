@@ -18,6 +18,9 @@ public class ActivityMessageListener {
     )
     public void processActity(Activity activity){
         log.info("Received activity for processing: {}", activity.getUserId());
+        log.warn(">>> Kafka message received in AiService");
+        log.warn(">>> Activity UserId: {}", activity.getUserId());
+        log.warn(">>> Full Activity: {}", activity);
         // Further processing logic can be added here
     };
 }
