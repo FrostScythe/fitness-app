@@ -2,17 +2,9 @@ spring:
   application:
     name: ACTIVITYSERVICE
 
-  kafka:
-    bootstrap-servers: localhost:9092
-
-    producer:
-      key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-      properties:
-        spring.json.add.type.headers: false
-
-topic:
-  activity: activity-topic
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/aiactivityfitness
 
 eureka:
   client:
@@ -27,3 +19,12 @@ eureka:
 
 server:
   port: 8082
+
+# 🔹 Custom app config (NOT under spring.kafka to avoid breaking auto-config)
+topic:
+  activity: activity-topic
+
+# Optional: if you want to override instead of hardcoding in config
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092

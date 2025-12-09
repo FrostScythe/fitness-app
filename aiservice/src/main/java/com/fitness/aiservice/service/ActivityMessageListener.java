@@ -16,7 +16,7 @@ public class ActivityMessageListener {
             topics = "${topic.activity}",
             groupId = "activity-processor-group"
     )
-    public void process(Activity activity) {
-        log.info("Consumed: {}", activity);
+    public void processActivity(Activity activity) {
+        log.info("Received Activity: {}", activity);
     }
 }
