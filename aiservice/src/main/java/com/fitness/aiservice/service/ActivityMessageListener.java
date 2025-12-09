@@ -12,9 +12,12 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class ActivityMessageListener {
 
-    @KafkaListener(topics = "${spring.kafka.topic.name}",groupId = "activity-processor-group")
+    @KafkaListener(
+            topics = "${spring.kafka.topic.name}",
+            groupId = "activity-processor-group"
+    )
     public void processActity(Activity activity){
-        log.info("Received activity: {}", activity.getUserId());
+        log.info("Received activity for processing: {}", activity.getUserId());
         // Further processing logic can be added here
     };
 }

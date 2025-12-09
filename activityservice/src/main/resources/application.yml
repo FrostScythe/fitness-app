@@ -8,13 +8,15 @@ spring:
 
   kafka:
     bootstrap-servers: localhost:9092
+
+    topic:
+      name: activity-topic
+
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-    template:
-      default-topic: activity-events
-    topic:
-      name: activity-events
+      properties:
+        spring.json.add.type.headers: false
 
 eureka:
   client:
