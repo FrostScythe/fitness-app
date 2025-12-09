@@ -17,10 +17,10 @@ public class ActivityService {
 
     private final ActivityRepository activityRepository;
     private final UserValidationService userValidationService;
-    private final KafkaTemplate<String,Activity> kafkaTemplate;
+    private final KafkaTemplate<String, Activity> kafkaTemplate;
 
-    @Value("${spring.kafka.topic.name}")
-    private String topicName;
+    @Value("${topic.activity}")
+    private String topic;
 
     public ActivityResponse trackActivity(ActivityRequest request) {
 
@@ -45,7 +45,7 @@ public class ActivityService {
         Activity savedActivity = activityRepository.save(activity);
 
         try {
-            kafkaTemplate.send(topicName, savedActivity.getId(),savedActivity);
+            kafkaTemplate.send(topic, savedActivity.getId(),savedActivity);
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -2,21 +2,17 @@ spring:
   application:
     name: ACTIVITYSERVICE
 
-  data:
-    mongodb:
-      uri: mongodb://localhost:27017/aiactivityfitness
-
   kafka:
     bootstrap-servers: localhost:9092
-
-    topic:
-      name: activity-topic
 
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
       properties:
         spring.json.add.type.headers: false
+
+topic:
+  activity: activity-topic
 
 eureka:
   client:

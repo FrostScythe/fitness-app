@@ -13,14 +13,10 @@ import org.springframework.stereotype.Service;
 public class ActivityMessageListener {
 
     @KafkaListener(
-            topics = "${spring.kafka.topic.name}",
+            topics = "${topic.activity}",
             groupId = "activity-processor-group"
     )
-    public void processActity(Activity activity){
-        log.info("Received activity for processing: {}", activity.getUserId());
-        log.warn(">>> Kafka message received in AiService");
-        log.warn(">>> Activity UserId: {}", activity.getUserId());
-        log.warn(">>> Full Activity: {}", activity);
-        // Further processing logic can be added here
-    };
+    public void process(Activity activity) {
+        log.info("Consumed: {}", activity);
+    }
 }
